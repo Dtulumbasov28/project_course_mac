@@ -45,11 +45,6 @@
   &__block {
     display: flex;
     gap: 16px;
-
-    @media (max-width: $tablet) {
-      justify-content: space-between;
-      flex-direction: column;
-    }
   }
 
   // .header__phone
@@ -77,6 +72,11 @@
   // .block__button
 
   &__button {
+	&:not(:first-child) {
+		@media (max-width: $tablet) {
+			display: none;
+		 }
+	}
   }
 }
 .phone {
