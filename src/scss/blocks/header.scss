@@ -1,17 +1,14 @@
 .header {
-  position: absolute;
   width: 100%;
-  left: 0;
-  top: 0;
   z-index: 50;
-  padding: 20px 0px;
+  padding-top: 20px;
   font-family: $fontFamilyUbuntu;
-  
+
   // .header__container
 
   &__container {
     display: flex;
-    min-height: 161px;
+    min-height: 100px;
     align-items: center;
     justify-content: space-between;
     @media (max-width: $mobileSmallXs) {
@@ -23,7 +20,6 @@
 
   &__logo {
     margin-right: 52px;
-  
 
     @media (max-width: $containerWidth) {
       overflow: hidden;
@@ -50,8 +46,6 @@
   // .header__phone
 
   &__phone {
-    white-space: nowrap;
-
     margin-right: 22px;
   }
 
@@ -60,27 +54,22 @@
   &__block {
   }
 }
-
-.header {
-}
 .block {
-  // .block__phone
-
-  &__phone {
-  }
-
   // .block__button
 
   &__button {
-	&:not(:first-child) {
-		@media (max-width: $tablet) {
-			display: none;
-		 }
-	}
+    &:not(:first-child) {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
   }
 }
+
 .phone {
+  white-space: nowrap;
 }
+
 .button {
   // .button__pink
 

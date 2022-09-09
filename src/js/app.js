@@ -4,6 +4,7 @@ import "../scss/style.scss";
 document.querySelector('.more-button').addEventListener('click', function () {
 	document.querySelector('.list-container').classList.toggle('active');
 });
+
 // Плавный скролл до элемента
 
 const smoothLinks = document.querySelectorAll("a[href*='#']");
