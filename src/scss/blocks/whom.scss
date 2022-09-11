@@ -41,6 +41,9 @@
     @media (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width: $mobileSmallXs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   // .whom__item
 

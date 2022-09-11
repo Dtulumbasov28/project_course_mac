@@ -75,6 +75,10 @@
       font-size: 36px;
       margin-top: 30px;
     }
+
+	 @media (max-width: $mobileSmallXs) {
+      font-size: 30px;
+    }
   }
 
   // .codependency__desc

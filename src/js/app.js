@@ -1,10 +1,16 @@
 import "../scss/style.scss";
 
 // Бургер-меню
-document.querySelector('.more-button').addEventListener('click', function () {
-	document.querySelector('.list-container').classList.toggle('active');
+const menu = document.querySelector('.list-container')
+const menuButton = document.querySelector('.more-button')
+
+menuButton.addEventListener('click', function () {
+	menu.classList.toggle('active');
 });
 
+window.addEventListener('mouseup', function () {
+	menu.classList.remove('active')
+})
 // Плавный скролл до элемента
 
 const smoothLinks = document.querySelectorAll("a[href*='#']");

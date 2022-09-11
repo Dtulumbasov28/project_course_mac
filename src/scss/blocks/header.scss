@@ -33,6 +33,7 @@
     @media (max-width: $mobileSmall) {
       overflow: hidden;
       width: 74px;
+      margin-right: 0;
     }
   }
 
@@ -47,6 +48,10 @@
 
   &__phone {
     margin-right: 22px;
+
+    @media (max-width: $mobileSmall) {
+      margin-right: 0;
+    }
   }
 
   // .header__block
@@ -55,6 +60,10 @@
   }
 }
 .block {
+
+  @media (max-width: $mobileSmallXs) {
+    display: none;
+  }
   // .block__button
 
   &__button {
@@ -120,6 +129,14 @@
   box-shadow: 0px 4px 4px 0px #00000033;
   line-height: 16px;
   text-align: center;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    border-radius: 50px;
+    background-color: #d27676;
+    background-color: #6d79db;
+    transition: all 0.3s ease 0s;
+  }
 
   // &:not(:last-child) {
   //   margin-right: 16px;
@@ -130,6 +147,10 @@
   &__pink {
     white-space: nowrap;
     background-color: #dd7c7c;
+
+    &:hover {
+      background-color: #d27676;
+    }
   }
 
   // .button__blue
@@ -139,5 +160,9 @@
     align-items: center;
     justify-content: center;
     background-color: #737fe6;
+
+    &:hover {
+      background-color: #6d79db;
+    }
   }
 }

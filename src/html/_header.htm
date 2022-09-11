@@ -6,13 +6,13 @@
 		<a href="tel:+78005514171" class="header__phone phone">8 (800) 551-41-71</a>
 		<div class="header__block block">
 			<button class="block__button button button__pink">Заказать звонок</button>
-			<a href="https://mcmk.su/clinics" class="block__button button button__blue" data-instant="yes">Выбрать
+			<a href="https://mcmk.su/clinics" target="_blank" class="block__button button button__blue" data-instant="yes">Выбрать
 				реабилитационный центр</a>
-			<a href="https://mcmk.su/lifeup" class="block__button button button__blue" data-instant="yes">
+			<a href="https://mcmk.su/lifeup" target="_blank" class="block__button button button__blue" data-instant="yes">
 				Лечение Зависимости на дому</a>
 		</div>
-				<div class="list-container">
-			<button class="more-button" aria-label="Menu Button">
+		<div class="list-container">
+			<button class="more-button">
 				<div class="menu-icon-wrapper">
 					<div class="menu-icon-line half first"></div>
 					<div class="menu-icon-line"></div>
@@ -20,16 +20,38 @@
 				</div>
 			</button>
 			<ul class="more-button-list">
-				<li class="more-button-list-item">
-					<span>Заказать звонок</span>
-				</li>
-
-				<li class="more-button-list-item">
-					<span>Выбрать реабилитационный центр</span>
-				</li>
-				<li class="more-button-list-item">
-					<span>Лечение Зависимости на дому</span>
-				</li>
+				<!-- При добавлении/удалении пунктов в меню, необходимо изменить высоту "more-button-list" на +/- 40px, 
+					а также добавить/убрать animation-delay в ".more-button-list-item" -->
+					<li class="more-button-list-item">
+						<a href="#codependency">Главная</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#mac">Что такое метафорические карты?</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#whom">Для кого курс?</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#benefits">Что сделаете во время курса </a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#program">Программа курса</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#experts">Наши менторы</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="#order">Записаться на курс</a>
+					</li>
+					<li class="more-button-list-item">
+						<button>Заказать звонок</button>
+					</li>
+					<li class="more-button-list-item">
+						<a href="https://mcmk.su/clinicsy" target="_blank">Выбрать реабилитационный центр</a>
+					</li>
+					<li class="more-button-list-item">
+						<a href="https://mcmk.su/lifeup" target="_blank">Лечение Зависимости на дому</a>
+					</li>
 		</div>
 	</div>
 </header>

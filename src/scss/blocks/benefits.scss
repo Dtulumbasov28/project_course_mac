@@ -1,23 +1,22 @@
 .benefits {
   // .benefits__container
 
-  &__container {    display: flex;
+  &__container {
+    display: flex;
     flex-wrap: wrap;
     position: relative;
   }
 
-
-
   // .benefits__title
 
   &__title {
+    margin-top: 66px;
     margin-bottom: 80px;
   }
 
   // .benefits__cards
 
   &__cards {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,7 +32,6 @@
     @media (max-width: $mobileSmall) {
       font-size: 22px;
       row-gap: 100px;
-
     }
   }
 
@@ -44,7 +42,7 @@
     width: 252px;
 
     @media (max-width: $mobileSmall) {
-        width: 100%;
+      width: 100%;
     }
     &:nth-child(8) {
       display: none;
