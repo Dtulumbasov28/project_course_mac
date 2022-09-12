@@ -66,9 +66,9 @@
     margin-top: 10px;
     padding-bottom: 10px;
 
-	 @media (max-width: $mobileSmallXs) {
-		font-size: 32px;
-	}
+    @media (max-width: $mobileSmallXs) {
+      font-size: 32px;
+    }
 
     &::after {
       content: "";
@@ -137,6 +137,9 @@
       border-color: #626cc4;
       outline: none;
     }
+    &::placeholder {
+      transition: all 0.5s ease 0s;
+    }
   }
 
   // .form__button
@@ -181,6 +184,10 @@
 .column-terms {
   display: flex;
   gap: 45px;
+
+  @media (max-width: $tablet) {
+    gap: 20px;
+  }
 
   // .column-terms__row
 

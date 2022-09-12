@@ -2,7 +2,6 @@
 }
 .codependency {
   padding: 16px 0px 63px 0px;
-  // background: url(../../img/background_main.png)  center/cover no-repeat;
   background-color: #d6d8f1;
 
   // .codependency__container
@@ -26,9 +25,20 @@
   // .codependency__background
 
   &__background {
+    background: url(../../img/background_main.png) center/cover no-repeat;
     position: absolute;
     width: 100%;
-    height: 731px;
+    height: 700px;
+    top: 170px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 101%;
+      bottom: -5px;
+      background: url(../../img/haze_main.svg) center/cover no-repeat;
+    }
   }
 
   // .codependency__right
@@ -71,12 +81,15 @@
     font-size: 50px;
     margin-top: 62px;
 
+    @media (max-width: $containerWidth) {
+      font-size: 48px;
+    }
     @media (max-width: $mobileSmall) {
       font-size: 36px;
       margin-top: 30px;
     }
 
-	 @media (max-width: $mobileSmallXs) {
+    @media (max-width: $mobileSmallXs) {
       font-size: 30px;
     }
   }
@@ -125,7 +138,6 @@
     @media (max-width: $mobileSmall) {
       flex-direction: column;
       margin-top: 40px;
-
     }
   }
 

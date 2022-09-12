@@ -116,6 +116,7 @@ button {
   overflow: hidden;
   // Прижимаем footer
   > main {
+    padding-top: 100px;
     flex: 1 1 auto;
   }
   // Фикс для слайдеров
@@ -149,3 +150,4 @@ button {
 @import "./blocks/program";
 @import "./blocks/experts";
 @import "./blocks/order";
+@import "./blocks/footer";

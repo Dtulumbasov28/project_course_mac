@@ -12,10 +12,11 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  @media (max-width: $mobileSmallXs) {  font-size: 26px;
-
-	gap: 20px;
-}
+  
+  @media (max-width: $mobileSmallXs) {
+    font-size: 26px;
+    gap: 20px;
+  }
 
   &::before {
     position: absolute;
@@ -30,10 +31,6 @@
 
   & span {
     white-space: nowrap;
-  }
-
-  &:hover {
-    animation-play-state: paused;
   }
 }
 

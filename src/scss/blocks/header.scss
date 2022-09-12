@@ -1,16 +1,24 @@
 .header {
   width: 100%;
+  height: 100px;
+  padding: 10px 0px;
+  position: fixed;
   z-index: 50;
-  padding-top: 20px;
   font-family: $fontFamilyUbuntu;
+  background-color: #fff;
+  transition: transform 0.1s linear;
+
+  &.hide {
+    transform: translateY(-100px);
+  }
 
   // .header__container
 
   &__container {
     display: flex;
-    min-height: 100px;
     align-items: center;
     justify-content: space-between;
+
     @media (max-width: $mobileSmallXs) {
       flex-wrap: wrap;
     }
@@ -48,6 +56,25 @@
 
   &__phone {
     margin-right: 22px;
+    @media (max-width: $containerWidth) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $mobile) {
+      overflow: hidden;
+      width: 44px;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(@img/whatsapp.svg);
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
     @media (max-width: $mobileSmall) {
       margin-right: 0;
@@ -60,7 +87,6 @@
   }
 }
 .block {
-
   @media (max-width: $mobileSmallXs) {
     display: none;
   }
@@ -77,6 +103,8 @@
 
 .phone {
   white-space: nowrap;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .button {
@@ -94,28 +122,6 @@
 .logo {
 }
 .phone {
-  font-weight: bold;
-  font-size: 22px;
-
-  @media (max-width: $containerWidth) {
-    font-size: 20px;
-  }
-
-  @media (max-width: $mobile) {
-    overflow: hidden;
-    width: 44px;
-  }
-
-  &::before {
-    content: "";
-    background-image: url(@img/whatsapp.svg);
-    background-size: cover;
-    width: 32px;
-    height: 32px;
-    margin-right: 12px;
-    display: inline-block;
-    vertical-align: middle;
-  }
 }
 .button {
   font-size: 14px;
@@ -126,16 +132,16 @@
   padding: 10px;
   height: 50px;
   border-radius: 6px;
-  box-shadow: 0px 4px 4px 0px #00000033;
   line-height: 16px;
   text-align: center;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    border-radius: 50px;
+    // border-radius: 50px;
     background-color: #d27676;
     background-color: #6d79db;
-    transition: all 0.3s ease 0s;
+    box-shadow: 0px 4px 4px 0px #00000033;
+    transition: all 0.2s ease 0s;
   }
 
   // &:not(:last-child) {
