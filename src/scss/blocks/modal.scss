@@ -1,0 +1,163 @@
+.modal {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+
+  &__close {
+    position: fixed;
+    bottom: 105%;
+    left: 105%;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    clip-path: polygon(
+      20% 0%,
+      0% 20%,
+      30% 50%,
+      0% 80%,
+      20% 100%,
+      50% 70%,
+      80% 100%,
+      100% 80%,
+      70% 50%,
+      100% 20%,
+      80% 0%,
+      50% 30%
+    );
+
+    @media (max-width: $mobileSmallXs) {
+      left: 95%;
+    }
+
+    &:hover {
+      background-color: #d27676;
+    }
+  }
+
+  // .modal__container
+
+  &__container {
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+  }
+
+  // .modal__overlay
+
+  &__overlay {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  // .modal__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    background-color: #fff;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transition: top 0.5s ease;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    padding: 20px;
+    min-width: 400px;
+
+    @media (max-width: $mobileSmallXs) {
+      min-width: 90%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  // .modal__title
+
+  &__title {
+    font-weight: 400;
+  }
+
+  // .modal__input
+
+  &__input {
+    width: 100%;
+  }
+
+  // .modal__button
+
+  &__button {
+    cursor: pointer;
+    width: 200px;
+  }
+}
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 18px;
+  margin-right: 16px;
+  border-radius: 4px;
+
+  // .radio__elem
+
+  &__elem {
+    display: none;
+
+    &:checked ~ .radio__visible {
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  // .radio__visible
+
+  &__visible {
+    border-radius: 4px;
+    min-width: 26px;
+    height: 26px;
+    position: relative;
+    background-color: #dd7c7c;
+    margin-right: 10px;
+
+    &:before {
+      display: none;
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // .radio__title
+
+  &__title {
+    font-size: 16px;
+  }
+}
+
+.modal__form--send {
+  input,
+  label {
+    display: none;
+  }
+  span {
+    display: block;
+  }
+}

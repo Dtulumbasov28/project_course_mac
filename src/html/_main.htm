@@ -1,6 +1,8 @@
 <main class="main">
   <section id="codependency" class="codependency">
-    <div class="codependency__background"></div>
+    <div class="codependency__background">
+      <img src="@img/background_main.png"></img>
+    </div>
     <div class="codependency__container">
       <div class="codependency__top">
         <h3 class="codependency__text">Психология ассоциаций</h3>
@@ -16,7 +18,7 @@
           Установите контакт со своим подсознанием, выявите суть проблемы и
           решите ее
         </h3>
-        <button class="codependency__button button button__pink">
+        <button class="codependency__button button button__pink button__modal">
           Заказать звонок
         </button>
       </div>
@@ -126,22 +128,6 @@
   </section>
   <section id="benefits" class="benefits">
     <div class="benefits__container">
-      <!-- <div class="benefits__ticker ticker">
-				<div class="ticker__item">
-					<span> Вы уже на верном пути</span>
-					<img class="ticker__decor" src="@img/ticker_decor.svg" alt="ticker_decor" />
-					<span> Вы уже на верном пути</span>
-					<img class="ticker__decor" src="@img/ticker_decor.svg" alt="ticker_decor" />
-					<span> Вы уже на верном пути</span>
-					<img class="ticker__decor" src="@img/ticker_decor.svg" alt="ticker_decor" />
-					<span> Вы уже на верном пути</span>
-					<img class="ticker__decor" src="@img/ticker_decor.svg" alt="ticker_decor" />
-					<span> Вы уже на верном пути</span>
-					<img class="ticker__decor" src="@img/ticker_decor.svg" alt="ticker_decor" />
-				</div>
-
-			</div> -->
-
       <div class="benefits__ticker ticker">
         <span> Вы уже на верном пути</span>
         <img
@@ -252,7 +238,7 @@
       <ul class="program__content content">
         <li class="content__item">
           <div class="content__image">
-            <img src="../img/program_1.png" alt="Когнитивная матрица" />
+            <img src="@img/program_1.png" alt="Когнитивная матрица" />
           </div>
           <div class="content__text">
             <h4 class="content__title">«Когнитивная матрица»</h4>
@@ -280,12 +266,12 @@
             >
           </div>
           <div class="content__image">
-            <img src="../img/program_2.png" alt="Когнитивная матрица" />
+            <img src="@img/program_2.png" alt="Когнитивная матрица" />
           </div>
         </li>
         <li class="content__item">
           <div class="content__image">
-            <img src="../img/program_3.png" alt="Когнитивная матрица" />
+            <img src="@img/program_3.png" alt="Когнитивная матрица" />
           </div>
           <div class="content__text">
             <h4 class="content__title">
@@ -310,7 +296,7 @@
       <ul class="experts__content content-experts">
         <li class="content-experts__column">
           <img
-            src="../img/experts_1.png"
+            src="@img/experts_1.png"
             class="content-experts__img"
             alt="Елена Ливада"
           />
@@ -323,7 +309,7 @@
         </li>
         <li class="content-experts__column">
           <img
-            src="../img/experts_2.png"
+            src="@img/experts_2.png"
             class="content-experts__img"
             alt="Вероника Хохлова"
           />
@@ -347,27 +333,36 @@
           <button class="column-price__promo">У меня есть промокод</button>
         </div>
         <div class="order__column column-form">
-          <form action="send.php" method="post" id="form" class="form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Имя"
-              class="form__input"
-              required
+          <form action="sendCourse.php" method="post" class="form">
+            <input 
+            type="text"
+            name="name"
+            placeholder="Имя"
+            class="form__input input"
+            required
+            maxlength="30"
             />
             <input
               type="tel"
               name="tel"
-              placeholder="+7 (999) 999-9999"
-              class="form__input tel"
+              placeholder="+7 (999) 999-99-99"
+              class="form__input input tel-form"
               required
             />
+
             <input
               type="email"
               name="email"
               placeholder="Электронная почта"
-              class="form__input"
+              class="form__input input"
               required
+            />
+            <input
+              type="text"
+              name="promokod"
+              autocomplete="off"
+              placeholder="Промокод"
+              class="form__input input form__input-promo"
             />
             <input
               type="submit"
@@ -377,16 +372,16 @@
             />
             <div class="form__text">
               Нажимая кнопку, принимаю условия
-              <a href="#">политики</a>
+              <a href="https://mcmk.su/politika-konfidencialnosti" target="_blank">политики</a>
               и
-              <a href="#"> пользовательского соглашения</a>
+              <a href="https://mcmk.su/dogovor-oferta-na-okazanie-konsultacionnyh-uslug" target="_blank"> пользовательского соглашения</a>
             </div>
           </form>
         </div>
         <div class="order__column column-terms">
           <div class="column-terms__row">
             <img
-              src="../img/order_return.svg"
+              src="@img/order_return.svg"
               class="column-terms__img"
               alt="Возврат денег"
             />
@@ -400,7 +395,7 @@
           </div>
           <div class="column-terms__row">
             <img
-              src="../img/order_question.svg"
+              src="@img/order_question.svg"
               class="column-terms__img"
               alt="Есть вопросы?"
             />
@@ -416,4 +411,42 @@
       </div>
     </div>
   </section>
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <form action="sendNumber.php" method="post" id="modal__form" class="modal__form">            
+          <button type="button" class="modal__close"></button>
+          <h3 class="modal__title title">Заказать звонок</h3>
+            <input
+              type="text"
+              name="name"
+              placeholder="Имя"
+              class="modal__input input"
+              required
+              maxlength="30"
+            />
+            <input
+              type="tel"
+              name="tel"
+              placeholder="+7 (999) 999-99-99"
+              class="modal__input input tel-modal"
+              required
+            />
+            <input
+              type="submit"
+              value="Отправить"
+              class="modal__button button button__pink"
+            />
+            <label class="radio radio--checkbox">
+              <input type="checkbox"  class="radio__elem" checked/>
+              <div class="radio__visible"></div>
+              <div class="radio__title">
+                Даю согласие на обработку
+                <a href="https://mcmk.su/politika-konfidencialnosti" target="_blank" >персональных данных</a>
+              </div>					
+            </label>
+            <span>Ваша заявка получена, мы перезвоним вам в ближайшее время!</span>
+          </form>
+    </div>
+  </div>
 </main>

@@ -45,15 +45,9 @@
     }
   }
 }
-.title {
-}
 .column-price {
   align-items: flex-start;
   font-size: 17px;
-  // .column-price__desc
-
-  &__desc {
-  }
 
   // .column-price__value
 
@@ -99,6 +93,7 @@
       background-color: #fff;
       transition: width 0.3s ease-out;
     }
+
     &:focus::after,
     &:hover::after {
       width: 100%;
@@ -109,17 +104,15 @@
   background: #ffffff;
   border: 2px solid #737fe6;
   border-radius: 7px;
-
-  // .column-form__form
-  &__form {
-  }
 }
+
 .form {
   display: flex;
   flex-direction: column;
   max-width: 366px;
   padding: 27px 23px;
   gap: 20px;
+
   @media (max-width: $tablet) {
     max-width: 100%;
   }
@@ -127,19 +120,6 @@
   // .form__input
 
   &__input {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 2px solid #737fe6;
-    border-radius: 5px;
-    padding: 17px;
-    font-size: 16px;
-
-    &:focus {
-      border-color: #626cc4;
-      outline: none;
-    }
-    &::placeholder {
-      transition: all 0.5s ease 0s;
-    }
   }
 
   // .form__button
@@ -161,9 +141,10 @@
     line-height: 120%;
     font-size: 14px;
     color: #939191;
+
     & a {
       position: relative;
-      // text-decoration: underline;
+
       &::after {
         content: "";
         position: absolute;
@@ -181,6 +162,21 @@
     }
   }
 }
+.input {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid #737fe6;
+  border-radius: 5px;
+  padding: 17px;
+  font-size: 16px;
+
+  &:focus {
+    border-color: #626cc4;
+    outline: none;
+  }
+  &::placeholder {
+    transition: all 0.5s ease 0s;
+  }
+}
 .column-terms {
   display: flex;
   gap: 45px;
@@ -195,17 +191,15 @@
     display: flex;
     gap: 30px;
   }
+  .error {
+    color: black;
+  }
 
   // .column-terms__img
 
   &__img {
     width: 42px;
     height: 42px;
-  }
-
-  // .column-terms__text
-
-  &__text {
   }
 
   // .column-terms__title
@@ -224,3 +218,16 @@
     line-height: 120%;
   }
 }
+
+.form__warning {
+  display: none;
+  color: #131313;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.form__input-promo {
+  display: none;
+}
+
+
