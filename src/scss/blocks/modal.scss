@@ -46,7 +46,7 @@
   // .modal__overlay
 
   &__overlay {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -66,7 +66,7 @@
     background-color: #fff;
     border-radius: 10px;
     left: 50%;
-    top: 50%;
+    top: -100%;
     transition: top 0.5s ease;
     transform: translate(-50%, -50%);
     z-index: 11;
@@ -152,12 +152,3 @@
   }
 }
 
-.modal__form--send {
-  input,
-  label {
-    display: none;
-  }
-  span {
-    display: block;
-  }
-}
