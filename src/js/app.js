@@ -160,7 +160,6 @@ modalOpen.forEach((elem) => {
     modal.style.top = "50%";
     modalOverlay.style.display = "block";
     document.body.style.overflow = "hidden"; // Блокировка скролла
-    header.classList.add("hide");
   });
 });
 

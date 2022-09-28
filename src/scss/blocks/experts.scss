@@ -44,6 +44,10 @@
     align-items: center;
     text-align: center;
     width: 50%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   // .content-experts__img
