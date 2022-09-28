@@ -1,23 +1,23 @@
 <main class="main">
   <section id="codependency" class="codependency">
     <div class="codependency__background">
-      <img src="@img/background_main.png"></img>
+      <img src="@img/background_main.png" alt="Фон" />
     </div>
     <div class="codependency__container">
       <div class="codependency__top">
-        <h3 class="codependency__text">Психология ассоциаций</h3>
+        <div class="codependency__text">Психология ассоциаций</div>
       </div>
       <div class="codependency__left">
-        <h3 class="codependency__subtitle subtitle">
+        <div class="codependency__subtitle subtitle">
           Авторский курс Елены Ливады с применением мак колоды
-        </h3>
+        </div>
         <h1 class="codependency__title title">
           «Созависимость от бессознательного к осознанности»
         </h1>
-        <h3 class="codependency__desc">
+        <div class="codependency__desc">
           Установите контакт со своим подсознанием, выявите суть проблемы и
           решите ее
-        </h3>
+        </div>
         <button class="codependency__button button button__pink button__modal">
           Заказать звонок
         </button>
@@ -43,7 +43,7 @@
   <section id="mac" class="mac">
     <div class="mac__container">
       <h2 class="mac__title title">Что такое метафорические карты</h2>
-      <h3 class="mac__subtitle title">Метафорические карты - что это?</h3>
+      <div class="mac__subtitle title">Метафорические карты - что это?</div>
       <div class="mac__text">
         У многих это словосочетание ассоциируется с мистикой, ритуалами и
         гаданиями. Это совершенно не так! Никакой магии! Метафорические
@@ -73,9 +73,9 @@
   <section id="whom" class="whom">
     <div class="whom__container">
       <h2 class="whom__title title">Курс будет полезен,</h2>
-      <h3 class="whom__subtitle subtitle">
+      <div class="whom__subtitle subtitle">
         если вы узнаёте себя в таких ситуациях
-      </h3>
+      </div>
       <ul class="whom__cards">
         <li class="whom__item">
           Живете с человеком, у которого есть зависимость
@@ -231,17 +231,17 @@
   <section id="program" class="program">
     <div class="program__container">
       <h2 class="program__title title">Программа курса</h2>
-      <h3 class="program__subtitle subtitle">
+      <div class="program__subtitle subtitle">
         Без скучных лекций и академизма. 8 часов практики и работы с
         бессознательным
-      </h3>
+      </div>
       <ul class="program__content content">
         <li class="content__item">
           <div class="content__image">
             <img src="@img/program_1.png" alt="Когнитивная матрица" />
           </div>
           <div class="content__text">
-            <h4 class="content__title">«Когнитивная матрица»</h4>
+            <div class="content__title">«Когнитивная матрица»</div>
             <span class="content__desc"
               >Цель: научиться работать с негативными и сложными переживаниями и
               жизненными ситуациями при помощи анализа происходящего с
@@ -255,9 +255,9 @@
         </li>
         <li class="content__item">
           <div class="content__text">
-            <h4 class="content__title">
+            <div class="content__title">
               Работа с чувствами «Колесо злости» при помощи метафорических карт
-            </h4>
+            </div>
             <span class="content__desc"
               >Цель: вы сумеете обнаружить, как вы работаете и выражаете свои
               негативные эмоции; почему используете и выражаете одни, а другие
@@ -274,9 +274,9 @@
             <img src="@img/program_3.png" alt="Когнитивная матрица" />
           </div>
           <div class="content__text">
-            <h4 class="content__title">
+            <div class="content__title">
               Выполнение и обсуждение техники «Кризис=Угроза + Ресурс»
-            </h4>
+            </div>
             <span class="content__desc"
               >Цель: вы совместно с группой и специалистом безопасно исследуете
               привычные пути преодоления кризисного события, вызванного
@@ -300,9 +300,9 @@
             class="content-experts__img"
             alt="Елена Ливада"
           />
-          <h3 class="content-experts__name">
+          <div class="content-experts__name">
             Елена Витальевна Сафонова (Ливада)
-          </h3>
+          </div>
           <span class="content-experts__desc"
             >Клинический психолог, семейный психолог, педагог-психолог</span
           >
@@ -313,7 +313,7 @@
             class="content-experts__img"
             alt="Вероника Хохлова"
           />
-          <h3 class="content-experts__name">Вероника Хохлова</h3>
+          <div class="content-experts__name">Вероника Хохлова</div>
           <span class="content-experts__desc"
             >Специалист по работе с созависимыми метод «Равное
             консультирование». Наш заботливый администратор, который будет
@@ -334,13 +334,13 @@
         </div>
         <div class="order__column column-form">
           <form action="sendCourse.php" method="post" class="form">
-            <input 
-            type="text"
-            name="name"
-            placeholder="Имя"
-            class="form__input input"
-            required
-            maxlength="30"
+            <input
+              type="text"
+              name="name"
+              placeholder="Имя"
+              class="form__input input"
+              required
+              maxlength="30"
             />
             <input
               type="tel"
@@ -367,14 +367,22 @@
             <input
               type="submit"
               value="Записаться"
-              placeholder="Электронная почта"
               class="form__button button button__blue"
             />
             <div class="form__text">
               Нажимая кнопку, принимаю условия
-              <a href="https://mcmk.su/politika-konfidencialnosti" target="_blank">политики</a>
+              <a
+                href="https://mcmk.su/politika-konfidencialnosti"
+                target="_blank"
+                >политики</a
+              >
               и
-              <a href="https://mcmk.su/dogovor-oferta-na-okazanie-konsultacionnyh-uslug" target="_blank"> пользовательского соглашения</a>
+              <a
+                href="https://mcmk.su/dogovor-oferta-na-okazanie-konsultacionnyh-uslug"
+                target="_blank"
+              >
+                пользовательского соглашения</a
+              >
             </div>
           </form>
         </div>
@@ -414,39 +422,46 @@
   <div class="modal">
     <div class="modal__overlay"></div>
     <div class="modal__container">
-      <form action="sendNumber.php" method="post" id="modal__form" class="modal__form">            
-          <button type="button" class="modal__close"></button>
-          <h3 class="modal__title title">Заказать звонок</h3>
-            <input
-              type="text"
-              name="name"
-              placeholder="Имя"
-              class="modal__input input"
-              required
-              maxlength="30"
-            />
-            <input
-              type="tel"
-              name="tel"
-              placeholder="+7 (999) 999-99-99"
-              class="modal__input input tel-modal"
-              required
-            />
-            <input
-              type="submit"
-              value="Отправить"
-              class="modal__button button button__pink"
-            />
-            <label class="radio radio--checkbox">
-              <input type="checkbox"  class="radio__elem" checked/>
-              <div class="radio__visible"></div>
-              <div class="radio__title">
-                Даю согласие на обработку
-                <a href="https://mcmk.su/politika-konfidencialnosti" target="_blank" >персональных данных</a>
-              </div>					
-            </label>
-            <span>Ваша заявка получена, мы перезвоним вам в ближайшее время!</span>
-          </form>
+      <form
+        action="sendNumber.php"
+        method="post"
+        id="modal__form"
+        class="modal__form"
+      >
+        <button type="button" class="modal__close"></button>
+        <div class="modal__title title">Заказать звонок</div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Имя"
+          class="modal__input input"
+          required
+          maxlength="30"
+        />
+        <input
+          type="tel"
+          name="tel"
+          placeholder="+7 (999) 999-99-99"
+          class="modal__input input tel-modal"
+          required
+        />
+        <input
+          type="submit"
+          value="Отправить"
+          class="modal__button button button__pink"
+        />
+        <div class="radio radio--checkbox">
+          <input type="checkbox" class="radio__elem" checked />
+          <div class="radio__visible"></div>
+          <div class="radio__title">
+            Даю согласие на обработку
+            <a href="https://mcmk.su/politika-konfidencialnosti" target="_blank"
+              >персональных данных</a
+            >
+          </div>
+        </div>
+        <span>Ваша заявка получена, мы перезвоним вам в ближайшее время!</span>
+      </form>
     </div>
   </div>
 </main>
